@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
 
 * {
-  padding: 0;
+  padding: 0px;
   margin: 0px;
   box-sizing: border-box;
 }
@@ -11,6 +11,7 @@ body {
   width: 100vw;
   font-family: "Kumbh Sans", sans-serif;
   background-color: #19a2ae;
+  position: relative;
   overflow: hidden;
 }
 
@@ -30,6 +31,25 @@ body {
   margin: 0 auto;
 }
 
+.bg-image {
+  width: 100%;
+  height: 200vh;
+  position: fixed;
+  z-index: -1;
+}
+
+.bg-image.top-pattern {
+  top: -10rem;
+  left: 1rem;
+  transform: translate(-50%, -50%);
+}
+
+.bg-image.bottom-pattern {
+  bottom: -16rem;
+  right: 4rem;
+  transform: translate(50%, 50%);
+}
+
 .card {
   width: 25rem;
   border-radius: 1rem;
@@ -37,11 +57,11 @@ body {
 }
 
 .top-container {
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   width: 100%;
   background-image: url("./images/bg-pattern-card.svg");
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 .img-container img {
@@ -49,26 +69,26 @@ body {
   border: 5px solid white;
   width: 6rem;
   height: 6rem;
-  transform: translateY(55%);
+  transform: translateY(65%);
 }
 
 .bottom-container {
   background-color: #fff;
   width: 100%;
-  padding: 30px 0;
+  padding: 2.5rem 0;
   border-top: 2px solid #19a2ae;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
 }
 
 .heading-container {
-  margin: 25px 0;
+  margin: 1.5rem 0;
 }
 
 .heading-container .card-heading {
   color: #343537;
-  margin-bottom: 10px;
-  font-size: 18px;
+  margin-bottom: 0.625rem;
+  font-size: 1.125rem;
   font-weight: 600;
 }
 
@@ -79,12 +99,12 @@ body {
 
 .heading-container .card-text {
   color: #6e6e6e;
-  font-size: 15px;
-  margin-bottom: 15px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 .stats-container {
-  padding-top: 35px;
+  padding-top: 2rem;
   border-top: 1px solid #bbbbbb;
   width: 100%;
 }
@@ -96,12 +116,32 @@ body {
 .stats-container .stats {
   margin: 0 25px;
   color: #6e6e6e;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 400;
 }
 
 .stats-container .stats p {
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 200;
-  margin: 10px 0;
+  margin: 0.625rem 0;
+}
+
+.attribution {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  color: #e6e2e2;
+  line-height: 1.7;
+  text-align: right;
+  font-size: 1rem;
+}
+.attribution a {
+  text-decoration: none;
+  color: #feffff;
+}
+
+@media(max-width: 480px) {
+  .card {
+    width: 20rem;
+  }
 }
