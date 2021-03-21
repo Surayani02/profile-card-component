@@ -18,4 +18,10 @@
 
 *.md
 
-design
+README.md
+
+README-template.md
+
+style-guide.md
+
+design/
